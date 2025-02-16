@@ -73,8 +73,8 @@ public class EvalExpr {
   private static boolean hasHighestOrEqualPrecedence(char opI, char opII) {
     int p1 = EvalExpr.getPrecedenceOf(opI);
     int p2 = EvalExpr.getPrecedenceOf(opII);
-    if (p1 == p2)
-      return opI != '^';
+//    if (p1 == p2)
+//      return opI != '^';
     return p1 >= p2;
   }
 
@@ -187,7 +187,7 @@ public class EvalExpr {
     List<String> tokens = new ArrayList<>();
     StringBuilder operand = new StringBuilder();
 
-    boolean expectOperand = true; //REM: Tracks if we expect an operand or operator
+    boolean expectOperand = true; //REM: Tracks if we expect an operand (true) or operator (false)
 
     for (int i = 0; i < expr.length(); i++) {
       char c = expr.charAt(i);

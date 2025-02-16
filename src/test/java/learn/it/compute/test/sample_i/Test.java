@@ -61,6 +61,10 @@ public class Test {
       "Results cannot be considered approximately equals"
     );
 
+    calculator.setEvalExpr("2^(-1)^5^(-3)");
+
+    Assertions.assertEquals(32768.0, calculator.calc() );
+
   }
 
   @org.junit.jupiter.api.Test
